@@ -1,0 +1,70 @@
+{
+  "models": {
+    "malware_detection": {
+      "kaggle_dataset": "promptcloud/malware-analysis-datasets-top1000-pe-headers",
+      "model_type": "classification",
+      "description": "Dataset for malware analysis using PE headers",
+      "features": [
+        "Machine",
+        "NumberOfSections",
+        "CreationYear",
+        "Characteristics",
+        "DllCharacteristics",
+        "SizeOfStackReserve",
+        "SizeOfHeapReserve"
+      ],
+      "target_column": "is_malware"
+    },
+    "network_anomaly": {
+      "kaggle_dataset": "mryanm/iot-intrusion-detection",
+      "model_type": "anomaly_detection",
+      "description": "IoT intrusion detection dataset",
+      "features": [
+        "packet_count",
+        "byte_count",
+        "duration",
+        "src_port",
+        "dst_port",
+        "protocol"
+      ],
+      "target_column": "is_anomaly"
+    },
+    "image_forensics": {
+      "kaggle_dataset": "ciplab/real-and-fake-face-detection",
+      "model_type": "image_classification",
+      "description": "Real and fake face detection for digital forensics",
+      "features": [
+        "image_path",
+        "label"
+      ],
+      "target_column": "is_fake"
+    },
+    "text_analysis": {
+      "kaggle_dataset": "rtatman/glove-global-vectors-for-word-representation",
+      "model_type": "nlp_embeddings",
+      "description": "GloVe word embeddings for text analysis",
+      "embedding_dimension": 100
+    },
+    "log_analysis": {
+      "kaggle_dataset": "osmihelp/osmi-mental-health-in-tech-survey-2016",
+      "model_type": "log_classification",
+      "description": "Dataset for log analysis and anomaly detection",
+      "features": [
+        "log_text",
+        "severity",
+        "source"
+      ],
+      "target_column": "anomaly_type"
+    }
+  },
+  "training": {
+    "default_test_size": 0.2,
+    "default_random_state": 42,
+    "model_save_format": "pickle"
+  },
+  "inference": {
+    "batch_size": 32,
+    "confidence_threshold": 0.8,
+    "max_text_length": 1000
+  }
+}

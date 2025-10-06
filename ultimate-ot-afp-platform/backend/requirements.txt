@@ -1,0 +1,115 @@
+# Ultimate OT-AFP Platform - Backend Requirements
+
+# Core FastAPI and async support
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# Database and caching
+redis==5.0.1
+elasticsearch==8.11.0
+sqlalchemy==2.0.23
+alembic==1.13.1
+
+# Authentication and security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+bcrypt==4.1.2
+
+# AI and machine learning
+torch==2.1.1
+torchvision==0.16.1
+transformers==4.35.2
+kaggle==1.6.3
+scikit-learn==1.3.2
+pandas==2.1.4
+numpy==1.26.2
+pillow==10.1.0
+
+# Forensics and analysis
+pyewf==20231205
+volatility3==2.7.0
+yara-python==4.3.1
+python-magic==0.4.27
+
+# Network and security
+scapy==2.5.0
+dpkt==1.9.8
+requests==2.31.0
+aiohttp==3.9.1
+websockets==12.0
+
+# System and process management
+psutil==5.9.6
+pywin32==306; sys_platform == 'win32'
+pywinauto==0.6.8; sys_platform == 'win32'
+
+# File and data processing
+python-docx==1.1.0
+openpyxl==3.1.2
+PyPDF2==3.0.1
+reportlab==4.0.7
+
+# Logging and monitoring
+structlog==23.2.0
+sentry-sdk[fastapi]==1.38.0
+
+# Development and testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+httpx==0.25.2
+black==23.11.0
+flake8==6.1.0
+mypy==1.7.1
+
+# Utilities
+python-dotenv==1.0.0
+click==8.1.7
+tqdm==4.66.1
+colorama==0.4.6
+
+# WebSocket support
+websockets==12.0
+
+# Configuration management
+dynaconf==3.2.4
+
+# Image processing for forensics
+opencv-python==4.8.1.78
+
+# Cryptography and encryption
+cryptography==41.0.7
+pycryptodome==3.19.0
+
+# Protocol analysis
+pyshark==0.6
+
+# Industrial protocols (OT Security)
+modbus-tk==1.1.4
+pymodbus==3.6.0
+
+# Cloud and API integrations
+boto3==1.34.19
+azure-storage-blob==12.19.0
+google-cloud-storage==2.10.0
+
+# Documentation
+mkdocs==1.5.3
+mkdocs-material==9.4.8
+
+# Container and deployment
+docker==6.1.3
+
+# Background tasks
+celery==5.3.4
+redis[hiredis]==5.0.1
+
+# API testing and documentation
+pytest-cov==4.1.0
+mkdocs==1.5.3
+
+# Additional forensics tools
+libewf-python==20231205
+sleuthkit-python==1.2.0
