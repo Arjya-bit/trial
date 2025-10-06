@@ -1,0 +1,95 @@
+"""
+AI Model Kaggle Integration Configuration
+"""
+
+import json
+import os
+from pathlib import Path
+
+# AI Model Configuration for Kaggle Integration
+AI_MODELS_CONFIG = {
+    "cybersecurity_models": [
+        {
+            "name": "malware-detection-model",
+            "kaggle_path": "datasets/vinayshanbhag/malware-detection-dataset",
+            "model_type": "classification",
+            "description": "Malware detection using machine learning",
+            "input_format": "pe_features",
+            "output_format": "malware_probability"
+        },
+        {
+            "name": "network-intrusion-detection",
+            "kaggle_path": "datasets/sampadab17/network-intrusion-detection",
+            "model_type": "anomaly_detection", 
+            "description": "Network intrusion detection system",
+            "input_format": "network_traffic",
+            "output_format": "intrusion_probability"
+        },
+        {
+            "name": "log-anomaly-detection",
+            "kaggle_path": "datasets/logpai/loghub",
+            "model_type": "nlp_anomaly",
+            "description": "System log anomaly detection",
+            "input_format": "log_entries",
+            "output_format": "anomaly_score"
+        }
+    ],
+    "forensics_models": [
+        {
+            "name": "file-type-classification",
+            "kaggle_path": "datasets/trainingdatapro/file-type-identification-dataset",
+            "model_type": "classification",
+            "description": "File type identification for digital forensics",
+            "input_format": "file_headers",
+            "output_format": "file_type_probability"
+        },
+        {
+            "name": "image-forensics",
+            "kaggle_path": "datasets/sophatvathana/image-forensics-dataset",
+            "model_type": "image_analysis",
+            "description": "Digital image forensics and tampering detection",
+            "input_format": "image_data",
+            "output_format": "tampering_analysis"
+        }
+    ],
+    "ot_security_models": [
+        {
+            "name": "scada-anomaly-detection",
+            "kaggle_path": "datasets/uciml/gas-sensor-array-drift-dataset",
+            "model_type": "time_series_anomaly",
+            "description": "SCADA system anomaly detection",
+            "input_format": "sensor_readings",
+            "output_format": "anomaly_detection"
+        },
+        {
+            "name": "industrial-protocol-analysis",
+            "kaggle_path": "datasets/mrkmakr/industrial-control-system-cyber-attack-datasets",
+            "model_type": "protocol_analysis",
+            "description": "Industrial protocol security analysis",
+            "input_format": "protocol_packets",
+            "output_format": "security_assessment"
+        }
+    ]
+}
+
+# Default model selection
+DEFAULT_MODELS = {
+    "malware_detection": "malware-detection-model",
+    "intrusion_detection": "network-intrusion-detection", 
+    "log_analysis": "log-anomaly-detection",
+    "file_analysis": "file-type-classification",
+    "image_forensics": "image-forensics",
+    "ot_anomaly": "scada-anomaly-detection",
+    "protocol_analysis": "industrial-protocol-analysis"
+}
+
+# Model performance thresholds
+MODEL_THRESHOLDS = {
+    "malware_detection": 0.85,
+    "intrusion_detection": 0.90,
+    "log_analysis": 0.75,
+    "file_analysis": 0.95,
+    "image_forensics": 0.80,
+    "ot_anomaly": 0.88,
+    "protocol_analysis": 0.82
+}
