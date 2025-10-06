@@ -1,0 +1,226 @@
+/* Global Styles for Ultimate OT-AFP Platform */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #0f1419 0%, #1a2332 100%);
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a2332;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 212, 170, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 212, 170, 0.8), 0 0 30px rgba(0, 212, 170, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 212, 170, 0.5);
+  }
+}
+
+/* Utility classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.5s ease-out;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.5s ease-out;
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+.glow {
+  animation: glow 2s infinite;
+}
+
+/* Terminal/Console styles */
+.terminal {
+  background: #0d1117;
+  color: #00ff41;
+  font-family: 'Courier New', monospace;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+  overflow-x: auto;
+}
+
+.terminal::before {
+  content: '$ ';
+  color: #00d4aa;
+  font-weight: bold;
+}
+
+/* Hacker/Matrix theme elements */
+.matrix-bg {
+  background: linear-gradient(45deg, #0f1419 25%, transparent 25%),
+              linear-gradient(-45deg, #0f1419 25%, transparent 25%),
+              linear-gradient(45deg, transparent 75%, #1a2332 75%),
+              linear-gradient(-45deg, transparent 75%, #1a2332 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+/* Status indicators */
+.status-online {
+  color: #2ea043;
+}
+
+.status-offline {
+  color: #f85149;
+}
+
+.status-warning {
+  color: #f0883e;
+}
+
+.status-unknown {
+  color: #8b949e;
+}
+
+/* Loading states */
+.loading-shimmer {
+  background: linear-gradient(90deg, #1a2332 25%, #252f3f 50%, #1a2332 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Card hover effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Cyber security themed elements */
+.cyber-border {
+  position: relative;
+  border: 2px solid transparent;
+  background: linear-gradient(145deg, #1e2a3a 0%, #252f3f 100%) padding-box,
+              linear-gradient(45deg, #00d4aa, #6c5ce7) border-box;
+}
+
+.data-stream {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: #00d4aa;
+  text-shadow: 0 0 10px rgba(0, 212, 170, 0.5);
+}
+
+/* Responsive design helpers */
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hide-tablet {
+    display: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  * {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+}

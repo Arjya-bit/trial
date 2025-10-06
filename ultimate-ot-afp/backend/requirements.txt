@@ -1,0 +1,100 @@
+# Ultimate OT-AFP Platform - Backend Dependencies
+
+# Core Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.4.2
+pydantic-settings==2.0.3
+
+# Database & Storage
+sqlalchemy==2.0.23
+alembic==1.12.1
+redis==5.0.1
+elasticsearch==8.11.0
+motor==3.3.2  # MongoDB async driver
+
+# Security & Authentication
+passlib[bcrypt]==1.7.4
+python-jose[cryptography]==3.3.0
+python-multipart==0.0.6
+cryptography==41.0.7
+
+# Async & WebSocket
+asyncio-mqtt==0.16.1
+websockets==12.0
+aiohttp==3.9.1
+httpx==0.25.2
+
+# AI & Machine Learning
+torch==2.1.1
+torchvision==0.16.1
+transformers==4.35.2
+scikit-learn==1.3.2
+numpy==1.24.4
+pandas==2.1.4
+tensorflow==2.15.0
+kaggle==1.5.16
+
+# Forensics & Analysis
+volatility3==2.5.0
+pytsk3==20230125
+libewf-python==20220806
+python-magic==0.4.27
+yara-python==4.3.1
+scapy==2.5.0
+pypcap==1.2.3
+
+# Network Security
+nmap==0.0.1
+python-nmap==0.7.1
+netaddr==0.9.0
+dnspython==2.4.2
+impacket==0.11.0
+
+# OT/ICS Security
+pymodbus==3.5.2
+opcua==0.98.13
+pycomm3==1.2.14
+iec61850==0.4.1
+
+# System & Process Monitoring
+psutil==5.9.6
+py-cpuinfo==9.0.0
+distro==1.8.0
+wmi==1.5.1; platform_system=="Windows"
+
+# File Processing
+pypdf==3.17.1
+python-docx==1.1.0
+openpyxl==3.1.2
+pillow==10.1.0
+exifread==3.0.0
+
+# Blockchain & Crypto
+web3==6.11.3
+bitcoin==1.1.42
+ecdsa==0.18.0
+
+# Stealth & Evasion
+pycryptodome==3.19.0
+base58==2.1.1
+
+# Utilities & Helpers
+rich==13.7.0
+click==8.1.7
+python-dotenv==1.0.0
+schedule==1.2.0
+watchdog==3.0.0
+tqdm==4.66.1
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+httpx==0.25.2
+
+# Development
+black==23.11.0
+flake8==6.1.0
+mypy==1.7.1
+pre-commit==3.5.0
