@@ -1,0 +1,5 @@
+{
+  "dataset": "",
+  "model_file": "model.joblib",
+  "notes": "Set KAGGLE_USERNAME and KAGGLE_KEY in environment or .env"
+}
