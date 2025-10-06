@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=Ultimate OT-AFP AutoRun
+Exec=/usr/bin/python3 /opt/ultimate-ot-afp/backend/main.py
