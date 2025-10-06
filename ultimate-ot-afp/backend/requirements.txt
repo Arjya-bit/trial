@@ -1,0 +1,7 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+pydantic-settings==2.6.0
+redis==5.0.8
+elasticsearch==8.15.0
+websockets==13.0
+kaggle==1.6.17
